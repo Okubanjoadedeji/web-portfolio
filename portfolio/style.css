@@ -25,6 +25,7 @@ li{
 
 h1,h2,h3,h4,h5,h6{
   margin: 0;
+  cursor: pointer;
 }
 
 :root{
@@ -33,16 +34,19 @@ h1,h2,h3,h4,h5,h6{
   --font-h2: 34px;
   --font-h3: 24px;
   --font-h4: 20px;
+  --font-display: 18px;
   
   /* color */
   --text-white: #f5f5f5;
+  --text-black: #000;
   --text-primary: #263ad1e0;
-  --text-secondary: #8c8cd1; 
+  --text-secondary: #9d9df5; 
 }
 
 
 /* utility classes */
 .flex{ display: flex;}
+.space-around{ justify-content: space-around;}
 .space-between{ justify-content: space-between;}
 .inline-block{ display: inline-block;}
 .align-center{align-items: center;}
@@ -54,14 +58,17 @@ h1,h2,h3,h4,h5,h6{
 .font-h2{ font-size: var(--font-h2);}
 .font-h3{ font-size: var(--font-h3);}
 .font-h4{ font-size: var(--font-h4);}
+.font-display{ font-size: var(--font-display);}
 
 .text-white{ color: var(--text-white);}
+.text-black{ color: var(--text-black);}
 .text-primary{ color: var(--text-primary);}
 .text-secondary{ color: var(--text-secondary);}
 
-.cursor-pointer{ cursor: pointer;}
 .w-full{ width: 100%;}
 
+
+/* Navigation */
 nav{
   padding-top: 32px;
   padding-left: 8%;
@@ -70,7 +77,7 @@ nav{
 
 .hero-sec{
   height: 100vh;
-  background-image: url(hero-background.jpg);
+  background-image: url(hero-bk.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -100,7 +107,10 @@ nav ul li a:hover{
 .sub-btn:hover{
   transform: scale(1.2);
 }
+/* ?Navigation End */
 
+
+/* Content  */
 .content{
   top: 50%;
   left: 8%;
@@ -133,9 +143,69 @@ h4{
 .content form input:last-child{
   padding: 10px 30px;
   border-radius: 30px;
+  color: var(--text-white);
   background-color: var(--text-primary);
-  box-shadow: 0px 0px 5px #000000, 0px 0px 15px #858585;
+  box-shadow: 0px 0px 5px #000, 0px 0px 15px #858585;
   top: 6px;
   right: 6px;
   border: none;
 }
+/* ?Content End */
+
+
+/* About Section  */
+.about{
+  padding: 100px 0px;
+  background-color: grey;
+}
+
+.about img{
+  height: auto;
+  width: 430px;
+}
+
+.about-text{
+  width: 550px;
+}
+
+.main{
+  width: 1130px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.about-text h1{
+  margin-bottom: 20px;
+}
+
+.about-text h4{
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+
+.about-text p{
+  text-indent: 10px;
+  letter-spacing: 1px;
+  line-height: 28px;
+  margin-bottom: 45px;
+}
+
+.about-text a{
+  background-color: var(--text-primary);
+  border: 2px solid transparent;
+  font-weight: 600;
+  padding: 13px 30px;
+  border-radius: 30px;
+  transition: .2s;
+}
+
+.about-text a:hover{
+  background-color: transparent;
+  border: 2px solid var(--text-primary);
+}
+
+
+
+
+/* ?About Section End */
